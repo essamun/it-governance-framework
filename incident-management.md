@@ -65,6 +65,13 @@ IT Manager is activated immediately when ANY of the following occur:
 - Any P2 affecting Oracle EBS, SCADA, or Dubai connectivity
 - Any security incident regardless of priority
 
+**Upon activation, IT Manager must:**
+1. Join the bridge within 15 minutes
+2. Brief Linda Hartley (CIO) within 30 minutes
+3. Brief David Marsh (VP Operations) if field or ERP affected
+4. Brief Robert Chen (CFO) if financial systems affected
+5. Own resolution and communication until incident is closed
+
 ---
 
 ## 7. Post-Incident Review (PIR) Requirement
@@ -75,7 +82,7 @@ IT Manager is activated immediately when ANY of the following occur:
 | **Deadline** | Within 48 hours of resolution |
 | **Owner** | IT Manager |
 | **Format** | Documented RCA + corrective actions |
-| **Review** | Standing agenda item at Tuesday CAB meeting |
+| **Review** | Standing agenda item at Tuesday CAB meeting (weekly, 10am Dammam time) |
 
 **PIR must answer:**
 1. What happened?
@@ -88,14 +95,14 @@ IT Manager is activated immediately when ANY of the following occur:
 
 ## 8. Incident Log Reference
 
-| Incident ID | Date | Priority | Description | Resolution Time | PIR Complete? |
-|-------------|------|----------|-------------|-----------------|---------------|
-| INC-003 | 3 Feb 2026 | P1 | Dubai VPN offline (STC routing failure) | 5.2 hours | Overdue — reinstated |
-| INC-006 | 1 Mar 2026 | P1 | ERP01 unresponsive (Oracle memory exhaustion) | 90 minutes | In progress |
-| INC-001 | Ongoing | P2 | Dubai MPLS packet loss | — | Pending |
-| INC-005 | Ongoing | P2 | Terminated accounts with active access | — | Pending |
-| INC-002 | Ongoing | P3 | ERP report timeout | — | N/A |
-| INC-007 | Ongoing | P3 | Field tablet patch failure | — | N/A |
+| Incident ID | Date | Priority | Description | Resolution Time | PIR Complete? | Root Cause | Status |
+|-------------|------|----------|-------------|-----------------|---------------|------------|--------|
+| INC-006 | 1 Mar 2026 | P1 | ERP01 unresponsive - Oracle memory exhaustion | 90 minutes | In progress | Stale terminated account + no Oracle job policy | Resolved |
+| INC-003 | 3 Feb 2026 | P1 | Dubai VPN offline - STC routing failure | 5.2 hours | Overdue - reinstated | STC change with no notification | Resolved |
+| INC-001 | Ongoing | P2 | Dubai MPLS packet loss | — | Pending | Underlying capacity issue | Open |
+| INC-005 | Ongoing | P2 | Terminated accounts with active system access | — | Pending | No automated access review tool | Open |
+| INC-002 | Ongoing | P3 | ERP report timeout | — | N/A | Under investigation | Open |
+| INC-007 | Ongoing | P3 | Field tablet patch failure | — | N/A | MSP not enforcing reboots | Open |
 
 ---
 
